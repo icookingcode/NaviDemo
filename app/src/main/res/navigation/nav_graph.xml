@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/blankFragment"
-    >
+    app:startDestination="@id/blankFragment">
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.guc.navidemo.BlankFragment"
         android:label="Blank"
-        tools:layout="@layout/fragment_blank" >
+        tools:layout="@layout/fragment_blank">
         <action
             android:id="@+id/action_blankFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
@@ -18,5 +17,13 @@
         android:id="@+id/secondFragment"
         android:name="com.guc.navidemo.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_secondFragment_to_myDialogFragment2"
+            app:destination="@id/myDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myDialogFragment"
+        android:name="com.guc.navidemo.MyDialogFragment"
+        tools:layout="@layout/dialog_fragment" />
 </navigation>
